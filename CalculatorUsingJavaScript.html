@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>calculator</title>
+<script>
+function demo()
+{
+var x=Number(document.getElementById("user1").value);
+var y=Number(document.getElementById("user2").value);
+add(x,y);
+sub(x,y);
+multi(x,y);
+div(x,y);
+return false;
+}
+
+function add(a,b)
+{
+ var result=document.getElementById("result-add");
+result.innerHTML=a+b;
+}
+
+function sub(a,b)
+{
+ var result=document.getElementById("result-sub");
+result.innerHTML=a-b;
+}
+
+function multi(a,b)
+{
+ var result=document.getElementById("result-multi");
+result.innerHTML=a*b;
+}
+
+function div(a,b)
+{
+ var result=document.getElementById("result-div");
+result.innerHTML=a/b;
+}
+</script>
+</head>
+<body>
+<h1 align="center">Calculator</h1>
+<hr>
+<form>
+<input type="number" id="user1">
+<input type="number" id="user2">
+<button onclick="return demo()">Calculate</button>
+</form>
+
+
+<h1>Your addition is</h1>
+<p id="result-add"></p>
+
+<h1>Your subtraction is</h1>
+<p id="result-sub"></p>
+
+<h1>Your multiplication is</h1>
+<p id="result-multi"></p>
+
+<h1>Your division is</h1>
+<p id="result-div"></p>
+
+</body>
+</html>

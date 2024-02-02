@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>js</title>
+</head>
+<body>
+	<h1 align="center">Table Finder</h1>
+<form id="form">
+	<input type="number" id="user">
+	<input type="submit" value="find table">
+</form>
+<script>
+	var frm=document.getElementById("form");
+	frm.onsubmit=function(){
+		var unum=Number(document.getElementById("user").value);
+		var i;
+		for (var i = 1; i <= 10; i++) {
+			document.write(unum*1+"<br>");
+		}
+	</script>
+</body>

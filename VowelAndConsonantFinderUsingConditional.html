@@ -1,0 +1,75 @@
+<html>
+<head>
+	<title>js</title>
+	<style>
+		#uwrong,#pwrong{
+			color: red;
+			
+		}
+
+	</style>
+</head>
+<body>
+	<h1>Vowel and Consonant Finder</h1>
+	<input type="text" id="user">
+	<button id="btn">check now!</button>
+	<p id="result"></p>
+
+	<script>
+		var btn=document.getElementById("btn");
+		btn.onclick=function(){
+			var user=document.getElementById("user").value;
+			var result=document.getElementById("result");
+			/*
+			if (user=='a' || user=='e' || user=='i' || user=='o' || user=='u' || user=='A' || user=='E' || user=='I' || user=='O' || user=='U') {
+				result.innerHTML="VOWEL";
+				return false;
+
+			}
+			else
+			{
+				result.innerHTML="CONSONANT";
+				return false;
+			}
+			*/
+			switch(user){
+				case 'a':
+				result.innerHTML="VOWEL";
+				break;
+				case 'e':
+				result.innerHTML="VOWEL";
+				break;
+				case 'i':
+				result.innerHTML="VOWEL";
+				break;
+				case 'o':
+				result.innerHTML="VOWEL";
+				break;
+				case 'u':
+				result.innerHTML="VOWEL";
+				break;
+				case 'A':
+				result.innerHTML="VOWEL";
+				break;
+				case 'E':
+				result.innerHTML="VOWEL";
+				break;
+				case 'I':
+				result.innerHTML="VOWEL";
+				break;
+				case 'O':
+				result.innerHTML="VOWEL";
+				break;
+				case 'U':
+				result.innerHTML="VOWEL";
+				break;
+			default:
+				result.innerHTML="CONSONANT";
+
+			}
+
+		}
+
+	</script>
+</body>
+</html>

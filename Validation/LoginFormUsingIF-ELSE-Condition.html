@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>js</title>
+</head>
+<body>
+<input type="text" id="user">
+<input type="submit" value="login" onclick="demo()">
+<p id="result"></p>
+<script>
+function demo()
+{
+var x=document.getElementById("user").value;
+if(x=="")
+{
+var result=document.getElementById("result");
+result.innerHTML="empty field";
+}
+else
+{
+var result1=document.getElementById("result");
+result1.innerHTML="login success";
+}
+}
+</script>
+</body>
+</html>

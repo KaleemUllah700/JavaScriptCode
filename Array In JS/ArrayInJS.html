@@ -1,0 +1,126 @@
+<html>
+<head>
+	<title>js</title>
+	</head>
+<body>
+	<form id="form">
+		username<br>
+		<input type="text" name="username" id="username" placeholder="username"><br><br>
+		password<br>
+		<input type="password" name="password" id="password" placeholder="password"><br><br>
+		<input type="submit" value="login">
+	</form>
+	<script>
+		
+		/*form validation using array
+		var frm = document.getElementById("form");
+		frm.onsubmit=function(){
+			var user_input=[];
+			user_input[0]=document.getElementById("username").value;
+			user_input[1]=document.getElementById("password").value;
+			if (user_input[0]=="Kaleem") {
+				if (user_input[1]="123456") {
+					window.alert("login success");
+				}
+				else
+				{
+					window.alert("password wrong");
+				}
+			}
+			else
+			{
+				window.alert("user not found");
+			}
+		}*/
+
+		/*how to create object in JS?
+		var student={firstname:"kaleem",lastname:"ullah",mobile:123456};
+		window.alert(student.firstname+student.lastname+mobile); printed all data
+		*/
+
+		/*how to form validation using object
+		var frm=document.getElementById("form");
+		frm.onsubmit=function(){
+		var student={username,password};
+		student.username=document.getElementById("username").value;
+		student.password=document.getElementById("password").value;
+		if (student.username=="Kaleem") {
+			if (student.password=="12345") {
+				window.alert("login success");
+			}
+			else
+			{
+				window.alert("password incorrect");
+			}
+		}
+		else
+		{
+			window.alert("user not found");
+		}
+
+	}
+
+	*/
+
+
+		var student=["kaleem","khan",19];
+		/*window.alert(student.toString());
+		window.alert(student[0].toString()+student[1].toString);
+		*/
+
+		/*join function
+		window.alert(student.join("$").toString());
+		*/
+
+		/*push function(add element in last location of array)
+		student.push("Hello");
+		window.alert(student.toString());
+		*/
+
+		/*pop function(delete last element of array)
+		student.pop()
+		window.alert(student.toString());
+		*/
+
+		/*shift function(if i want to delete first element of array then i can deleted using shift function)
+        student.shift();
+        window.alert(student.toString());
+        */
+
+        /*unshift function(if i want to add element in first position of array then i can added using unshift function)
+        student.unshift("iub","hi");
+        window.alert(student.toString());
+		*/
+
+		/*splice function(if we wand to delete spicific position element then we can deleted using splice function)
+		student.splice(2,3,"kpk"); 2 represent location and 3 represent data or two data or three data
+		window.alert(student.toString());
+		*/
+
+		/*concat function(add to array)
+		var arr1=["bulu","red",3,4];
+		var arr2=["green","orange",7];
+		var add=arr1.concat(arr2);
+		window.alert(add.toString());
+		*/
+
+		/*slice function(specific positon data deleted)
+		var x =student.slice(1);
+		window.alert(x.toString());
+		*/
+
+		/*sort function
+		arr1=[7,5,4,1,2,3];
+		window.alert(arr1.sort());
+		*/
+
+		//sort function
+		arr1=[7,5,4,1,2,3];
+		window.alert(arr1.reverse());
+		
+
+
+		
+	</script>
+</body>
+</html>

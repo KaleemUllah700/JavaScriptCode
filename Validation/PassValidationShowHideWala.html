@@ -1,0 +1,34 @@
+<html>
+<head>
+	<title>js</title>
+</head>
+<body>
+	
+	<input type="password" id="password" placeholder="password">
+	<input type="checkbox" value="show password" id="check-box"> <span id="show-text">show password</span>
+
+	<script>
+		var pass_text=document.getElementById("password").value;
+		var pass_input=document.getElementById("password");
+		var check_box=document.getElementById("check-box");
+		var show_text=document.getElementById("show-text");
+		check_box.onclick=function(){
+			
+
+			if (check_box.checked==true) {
+				pass_input.type="text";
+				show_text.innerHTML="Hide password";
+				
+			}
+			else{
+				pass_input.type="password";
+				show_text.innerHTML="show password";
+			}
+			
+		}
+
+
+	</script>
+
+</body>
+</html>

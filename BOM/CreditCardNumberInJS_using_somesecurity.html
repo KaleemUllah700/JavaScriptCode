@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>js</title>
+	<style>
+		h1{
+			padding: 0;
+			margin: 0;
+		}
+		input{
+			width: 40px;
+			height: 30px;
+			margin-left: 10px;
+
+		}
+		input:focus{
+			outline: none;
+		}
+	</style>
+</head>
+
+<body>
+<h1>Enter Credit Card Number</h1>
+<form onautocomplete="off">
+	<!--onkeyup,onkeydown,onkeypress-->
+<input type="text" id="a" maxlength="4" onkeyup="demo(this,'b')">
+<input type="text" id="b" maxlength="4" onkeyup="demo(this,'c')">
+<input type="text" id="c" maxlength="4" onkeyup="demo(this,'d')">
+<input type="text" id="d" maxlength="4">
+</form>
+
+<script>
+	function demo(x,y){
+		var user=x.value.length;
+		var len=x.getAttribute("maxlength"); //getAttribute() is a method
+		if(user==len){
+			document.getElementById(y).focus();
+		}
+	}
+	document.onkeydown=function(event){
+		if(event.ctrlKey && event.shiftKey && event.keyCode == 73){
+			return false;
+		}
+	}
+</script>
+</body>
+</html>

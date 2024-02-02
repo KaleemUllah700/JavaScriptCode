@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>js</title>
+</head>
+<body>
+<form>
+<input type="number" id="user-one">
+<input type="number" id="user-two">
+<button onclick="return demo()">calculate</button>
+<p id="result"></p>
+</form>
+<script>
+function demo() //function definition
+{
+var x=Number(document.getElementById("user-one").value);
+var y=Number(document.getElementById("user-two").value);
+add(x,y);//function call by passing value
+return false;
+
+}
+function add(a,b)
+{
+var result=document.getElementById("result");
+result.innerHTML="Your answer is "+(a+b);
+}
+</script>
+</body>
+</html>

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>js</title>
+</head>
+<body>
+<h2 id="notice"></h2>
+<div id="webpage">
+<h1>welcome to website</h1>
+</div>
+<script>
+window.onload=function(){
+setInterval(check,100);
+}
+function check(){
+if(navigator.onLine==true){
+document.getElementById("webpage").style.display="block";
+document.getElementById("notice").innerHTML="";
+}
+else{
+document.getElementById("webpage").style.display="none";
+document.getElementById("notice").innerHTML="no internet connection please connect your internet";
+}
+}
+
+</script>
+</body>
+</html>

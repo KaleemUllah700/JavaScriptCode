@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>js</title>
+<style>
+</style>
+</head>
+<body>
+
+<script>
+var char="kaleem";
+var result=char.charCodeAt(0);
+window.alert(result);
+
+
+var char1="abcdefghijklmnopqrstuvwxyz";
+for(i=0;i<=25;i++){
+document.write(i+"<br>");
+}
+
+var code=65;
+var result=String.fromCharCode(code);
+window.alert(result);
+
+
+for(i=0;i<=255;i++){
+var result=String.fromCharCode(i);
+document.write(result+"<br>");
+}
+
+
+//print a-z characters
+document.write("print all a-z characters");
+var first='a';
+var last='z';
+var i;
+for(i=first.charCodeAt(0);i<=last.charCodeAt(0);i++){
+var result=String.fromCharCode(i);
+document.write(result+"<br>");
+}
+
+
+</script>
+</body>
+</html>
+
+

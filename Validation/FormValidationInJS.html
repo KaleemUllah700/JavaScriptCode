@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>JS</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+    <style>
+        form{
+            font-size: 30px;
+        }
+        fieldset{
+            width: 35%;
+            height: 430px;
+            margin: 0 auto;
+        }
+        #fname,#lname,#email,#password{
+            width: 350px;
+            height: 40px;
+            
+        }
+        #sign{
+            width: 360px;
+            height: 45px;
+            margin-top: 15px;
+            background-color: lightgray;
+            border: none;
+            color: black;
+            font-size: 20px;
+        }
+        
+        #fcheck,#lcheck,#echeck,#pcheck{
+            display: none;
+            
+        }
+        #sign:hover{
+            cursor:no-drop;
+        }
+    
+        
+    </style>
+  <body>
+      <form>
+     <fieldset>
+         <legend>sign up!</legend>
+      First Name<br>
+         <input type="text" name="fist name" id="fname" onblur="first_name_val()" onclick="first_name_val_close()"><br>
+      Last Name<br>
+          <input type="text" name="last name" id="lname" onclick="first_name_val();last_name_val_close()" onblur="last_name_val()"><br>
+      Email<br>
+          <input type="email" name="email" id="email" onclick="first_name_val();last_name_val();email_val_close()" onblur="email_val()"><br>
+      Password<br>
+          <input type="password" name="password" id="password" onclick="first_name_val();last_name_val();email_val()" oninput="sign_up_val()"><br>
+          <input type="submit" value="sign up" id="sign">
+          </fieldset>
+      </form>
+      
+      
+      
+      <script>
+      /* first name coding start */
+          
+          function first_name_val(){
+              var fname=document.getElementById("fname").value;
+              var input=document.getElementById("fname");
+              var check=document.getElementById("fcheck");
+              fname==""?input.setAttribute("value","this field is empty"):fname;
+              fname==""?input.style.border="1px solid red":fname;
+              fname==""?input.style.color="red":fname;
+          }
+          
+           function first_name_val_close(){
+              var fname=document.getElementById("fname").value;
+              var input=document.getElementById("fname");
+              var check=document.getElementById("fcheck");
+              fname=="this field is empty"?input.setAttribute("value",""):fname;
+              fname=="this field is empty"?input.style.border="1px solid black":fname;
+              fname=="this field is empty"?input.style.color="black":fname;
+          }
+          
+          /*first name coding end */
+          
+          /* last name coding start */
+          
+          function last_name_val(){
+              var lname=document.getElementById("lname").value;
+              var input=document.getElementById("lname");
+              var check=document.getElementById("fcheck");
+              lname==""?input.setAttribute("value","this field is empty"):lname;
+              lname==""?input.style.border="1px solid red":lname;
+              lname==""?input.style.color="red":lname;
+          }
+          
+           function last_name_val_close(){
+              var lname=document.getElementById("lname").value;
+              var input=document.getElementById("lname");
+              var check=document.getElementById("fcheck");
+              lname=="this field is empty"?input.setAttribute("value",""):lname;
+              lname=="this field is empty"?input.style.border="1px solid black":lname;
+              lname=="this field is empty"?input.style.color="black":lname;
+          }
+          
+          /*last name coding end */
+          
+          /* email coding start */
+          
+          function email_val(){
+              var email=document.getElementById("email").value;
+              var input=document.getElementById("email");
+              email==""?input.setAttribute("value","field is empty"):email;
+              email==""?input.style.border="1px solid red":email;
+              email==""?input.style.color="red":email;
+          }
+          
+          function email_val_close(){
+              var email=document.getElementById("email").value;
+              var input=document.getElementById("email");
+              email=="field is empty"?input.setAttribute("value",""):email;
+              email=="field is empty"?input.style.border="1px solid black":email;
+              email=="field is empty"?input.style.color="black":email;
+          }
+          
+          /* email coding end */
+          
+           /* sign up coding start */
+          function sign_up_val(){
+              fname=document.getElementById("fname").value;
+              lname=document.getElementById("lname").value;
+              email=document.getElementById("email").value;
+              pwd=document.getElementById("password").value;
+              input=document.getElementById("fname");
+              input=document.getElementById("lname");
+              input=document.getElementById("email");
+              input=document.getElementById("password");
+              sign=document.getElementById("sign");
+              fname=lname=email=pwd=""?sgin.style.backgroundColor="lightgrey":sign.style.backgroundColor="blue";
+              fname=lname=email=pwd=""?sign.setAttribute("disabled",""):sign.style.cursor="pointer";
+              
+              
+              
+          }
+           /* sign up coding end */
+      </script>
+      
+      
+</body>
+</html>

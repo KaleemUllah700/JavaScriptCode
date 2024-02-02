@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>js</title>
+</head>
+<body>
+<form>
+	username<br>
+	<input type="text" name="username" id="username"><br><br>
+	password<br>
+	<input type="password" name="password" id="password"><br><br>
+	<input type="checkbox" value="remember me!" onclick="remember()" id="checkbox">Remember me!
+	<input type="submit" value="login">
+</form>
+<script>
+
+	window.onload=function(){
+		if(document.cookie.length!=0){
+		var name=document.cookie.split("=");
+		document.getElementById("username").value=name[1];
+		document.getElementById("password").value=name[2];
+		var check=document.getElementById("checkbox").checked="checked";
+		if(check=="checked"){
+			document.getElementById("checkbox").onclick=function(){
+				document.cookie="user=;expires=Tue,2 Oct 1999 12:00:00 PST";
+			}
+		}
+	}
+}
+
+
+	
+	function remember(){
+		var user=document.getElementById("username").value;
+		var pwd=document.getElementById("password").value;
+		document.cookie="user="+user+"="+pwd+";expires=Tue,2 Oct 2023 12:00:00 PST";
+
+	}
+	alert(document.cookie);
+
+</script>
+</body>
+</html>

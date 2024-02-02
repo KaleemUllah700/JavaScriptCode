@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>js</title>
+<script>
+function demo(){
+var x=document.getElementById("number").value;
+var y=document.getElementById("number1").value;
+var z=document.getElementById("result");
+z.innerHTML="Your remainder is " + x%y;
+}
+</script>
+</head>
+<body>
+<h1>Find your remainder</h1>
+<input type="number" id="number">
+<input type="number" id="number1">
+<input type="submit" value="get	remainder" onclick="demo()">
+<p id="result"></p>
+</body>
+</html>

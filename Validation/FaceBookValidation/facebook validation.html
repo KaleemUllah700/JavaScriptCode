@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>js</title>
+<style>
+    body{
+        margin:0;
+        padding: 0;
+    }
+    *{
+        box-sizing: border-box;
+    }
+    #page{
+        width: 900px;
+        height: 600px;
+        border: 1px solid grey;
+        margin: 0 auto;
+    }
+    #left{
+        width: 450px;
+        height: 600px;
+        border: 1px solid red;
+        float: left;
+    }
+    #right{
+        width: 446px;
+        height: 600px;
+        border: 1px solid red;
+        float: right;
+    }
+    #create-account{
+        padding: 0;
+        margin: 0;
+        margin-left: 10px;
+        margin-bottom: 5px;
+        
+        
+    }
+    #always-free{
+        padding: 0;
+        margin: 0;
+        margin-left: 10px;
+        margin-bottom: 5px;
+    }
+    #fname,#lname{
+        width: 200px;
+        height: 30px;
+        margin-left: 5px;
+         margin-bottom: 5px;
+        padding-left: 5px;
+        
+        
+    }
+    #email{
+        width: 410px;
+        height: 30px;
+        margin: 5px;
+        margin-bottom: 5px;
+        padding-left: 5px;
+        
+    }
+    #pwd{
+        width: 410px;
+        height: 30px;
+        margin: 5px;
+        padding-left: 5px;
+        
+    }
+    #fname,#lname,#email,#pwd:focus{
+        border: 1px solid grey;
+        outline: none;
+    }
+    #warring{
+        width: 25px;
+        height: 25px;
+        position: absolute;
+        left:863px;
+        top: 69px;
+        display: none;
+        
+    }
+    #warring1{
+        width: 25px;
+        height: 25px;
+        position: absolute;
+        left:1072px;
+        top: 69px;
+        display: none;
+        
+        
+    }
+     #warring2{
+        width: 25px;
+        height: 25px;
+        position: absolute;
+        left:1072px;
+        top: 109px;
+        display: none;
+        
+        
+    }
+    
+    #warring3{
+        width: 25px;
+        height: 25px;
+        position: absolute;
+        left:1072px;
+        top: 150px;
+        display: none;
+    
+        
+        
+    }
+
+    #sign-btn{
+        width: 90px;
+        height: 40px;
+        margin-left: 6px;
+        margin-top: 10px;
+        border: none;
+        background-color: grey;
+        border-radius:5px;
+
+    }
+</style>
+ 
+</head>
+<body>
+<div id="page">
+    
+    <div id="left"></div>
+    <form  onsubmit="return sub_val()">
+    <div id="right">
+        <img src="warring.png" id="warring">
+        <img src="warring.png" id="warring1">
+        <img src="warring.png" id="warring2">
+         <img src="warring.png" id="warring3">
+      <h1 id="create-account">Create an account</h1>
+        <h4 id="always-free">it's free and always will be.</h4>
+        <input type="text" name="first name" id="fname" placeholder="First name" onblur="fname_val()" onclick="fname_val_close()">
+        <input type="text" name="last name" id="lname" placeholder="Last name" onblur="lname_val()" onclick="lname_val_close()">
+        <input type="email" id="email" placeholder="Mobile number or email address" onblur="email_val()" onclick="fname_val();lname_val();email_val_close()"><br>
+        <input type="password" id="pwd" placeholder="Password" onblur="pass_val()" onclick="fname_val();lname_val();email_val();pass_val_close()">
+        <button id="sign-btn">sign up!</button>
+
+    </div>
+    
+    </div>
+    </form>
+       <script>
+        //start firstname validation
+  function fname_val()
+           {
+               var fname_text=document.getElementById("fname").value;
+               var fname_input=document.getElementById("fname");
+               var warring=document.getElementById("warring");
+               if(fname_text=="")
+                   {
+                       fname_input.style.border="1px solid red";
+                       warring.style.display="block";
+                   }
+            
+            }
+
+    function fname_val_close(){
+               var fname_text=document.getElementById("fname").value;
+               var fname_input=document.getElementById("fname");
+               var warring=document.getElementById("warring");
+               if(fname_text=="")
+                   {
+                       fname_input.style.border="1px solid grey";
+                       warring.style.display="none";
+                   }
+    }
+
+    //end firstname validation
+
+    //start lastname validation
+           
+           function lname_val(){
+               var lname_text=document.getElementById("lname").value;
+               var lname_input=document.getElementById("lname");
+               var warring=document.getElementById("warring1");
+               if(lname_text=="")
+                   {
+                       lname_input.style.border="1px solid red";
+                       warring1.style.display="block";
+                   }
+           }
+
+           function lname_val_close(){
+            var lname_text=document.getElementById("lname").value;
+               var lname_input=document.getElementById("lname");
+               var warring=document.getElementById("warring1");
+               if(lname_text=="")
+                   {
+                       lname_input.style.border="1px solid grey";
+                       warring1.style.display="none";
+                   }
+
+           }
+
+        //end lastname validation
+
+        //start email validation
+
+           function email_val(){
+            var email_text=document.getElementById("email").value;
+            var email_input=document.getElementById("email");
+            var warring2=document.getElementById("warring2");
+            if(email_text==""){
+                email_input.style.border="1px solid red";
+                warring2.style.display="block";
+            }
+           }
+
+           function email_val_close(){
+            var email_text=document.getElementById("email").value;
+            var email_input=document.getElementById("email");
+            var warring2=document.getElementById("warring2");
+            if(email_text==""){
+                email_input.style.border="1px solid grey";
+                warring2.style.display="none";
+            }
+           }
+
+        //end email validation
+
+        //start password validation
+           function pass_val(){
+            var pass_text=document.getElementById("pwd").value;
+            var pass_input=document.getElementById("pwd");
+            var warring3=document.getElementById("warring3");
+            if(pass_text==""){
+                pass_input.style.border="1px solid red";
+                warring3.style.display="block";
+            }
+           }
+
+           function pass_val_close(){
+             var pass_text=document.getElementById("pwd").value;
+            var pass_input=document.getElementById("pwd");
+            var warring3=document.getElementById("warring3");
+            if(pass_text==""){
+                pass_input.style.border="1px solid grey";
+                warring3.style.display="none";
+            }
+           }
+
+
+          
+        //end password validation
+
+        //start submit validation
+           function sub_val(){
+               var fname_text=document.getElementById("fname").value;
+               var lname_text=document.getElementById("lname").value; 
+               var email_text=document.getElementById("email").value;
+               var pass_text=document.getElementById("pwd").value;
+               var fname_input=document.getElementById("fname");
+               var lname_input=document.getElementById("lname"); 
+               var email_input=document.getElementById("email");
+               var pass_input=document.getElementById("pwd");
+               var warring=document.getElementById("warring");
+               var warring1=document.getElementById("warring1");
+               var warring2=document.getElementById("warring2");
+               var warring3=document.getElementById("warring3");
+
+                if (fname_text=lname_text=email_text=pass_text=="") {
+             fname_input.style.border="1px solid red";
+             lname_input.style.border="1px solid red";
+             email_input.style.border="1px solid red";
+             pass_input.style.border="1px solid red";
+             warring.style.display="inline";
+             warring1.style.display="inline";
+             warring2.style.display="inline";
+             warring3.style.display="inline";
+             return false;
+           }
+           else{window.alert("Sign Up Success");}
+           }
+          
+        //end submit validation
+       
+    </script>
+</body>
+</html>

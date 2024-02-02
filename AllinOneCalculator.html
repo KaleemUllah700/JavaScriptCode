@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>js</title>
+<script>
+function demo(){
+var x=document.getElementById("user").value;
+var y=document.getElementById("result");
+y.innerHTML="Your result is "+eval(x);
+}
+</script>
+</head>
+<body>
+<h1 align="center">All in one calculator(Using eval() function)</h1>
+<hr>
+<input id="user">
+<input type="submit" value="calculate" onclick="demo()">
+<p id="result"></p>
+</body>
+</html>

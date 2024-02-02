@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>js</title>
+	<style>
+		body{
+			padding: 0;
+			margin: 0;
+			background-color: lightgrey;
+
+		}
+		header{
+			width: 100%;
+			height: 120px;
+			background-color: blue;
+			position: fixed;
+			top: 0;
+			left: 0;
+
+			
+		
+
+		}
+		#page{
+			width: 70%;
+			height: 800px;
+			background-color: white;
+			margin: 125px auto;
+			
+			font-size: 40px;
+		}
+		#page:focus{
+			outline: none;
+		}
+		h1{
+			color: white;
+			text-align: center;
+			padding: 0;
+			margin: 0;
+			margin-top: 10px;
+		}
+		button{
+			width: 100px;
+			height: 50px;
+			background-color: wihte;
+			float: left;
+			margin-left: 20px;
+		}
+		button:hover{
+			cursor: pointer;
+		}
+	</style>
+</head>
+<body>
+	<header>
+		<h1>MiroSoft Word</h1>
+		<button id="bold" title="Bold (Ctrl+B)"><b>B</b></button>
+		<button id="italic" title="Itilic (Ctrl+I)"><i>I</i></button>
+		<button id="underline"><u>U</u></button>
+		<button id="super">A<sup>2</sup></button>
+		<button id="sub">A<sub>2</sub></button>
+		<button id="left">LEFT</button>
+		<button id="center">CENTER</button>
+		<button id="right">RIGHT</button>
+		<button id="delete">DELETE</button>
+		<button id="undo">UNDO</button>
+		<button id="redo">REDO</button>
+	</header>
+	<div id="page" contenteditable="true" spellcheck="false"></div>
+
+	<script>
+		var bold=document.getElementById("bold");
+		bold.onclick=function(){
+			document.execCommand("bold");
+		}
+
+		var italic=document.getElementById("italic");
+		italic.onclick=function(){
+			document.execCommand("italic");
+		}
+
+		var underline=document.getElementById("underline");
+		underline.onclick=function(){
+			document.execCommand("underline");
+		}
+
+		var sup=document.getElementById("super");
+		sup.onclick=function(){
+			document.execCommand("superscript");
+		}
+
+		var sub=document.getElementById("sub");
+		sub.onclick=function(){
+			document.execCommand("subscript");
+		}
+
+		var left=document.getElementById("left");
+		left.onclick=function(){
+			document.execCommand("justifyLeft");
+		}
+
+		var center=document.getElementById("center");
+		center.onclick=function(){
+			document.execCommand("justifyCenter");
+		}
+
+		var right=document.getElementById("right");
+		right.onclick=function(){
+			document.execCommand("justifyRight");
+		}
+
+		var del=document.getElementById("delete");
+		del.onclick=function(){
+			document.execCommand("delete");
+		}
+
+		var undo=document.getElementById("undo");
+		undo.onclick=function(){
+			document.execCommand("undo");
+		}
+
+		var redo=document.getElementById("redo");
+		redo.onclick=function(){
+			document.execCommand("redo");
+		}
+
+
+
+	</script>
+</body>
+</html>

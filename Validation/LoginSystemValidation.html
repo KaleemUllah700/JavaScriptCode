@@ -1,0 +1,62 @@
+<html>
+<head>
+	<title>js</title>
+	<style>
+		#uwrong,#pwrong{
+			color: red;
+			
+		}
+
+	</style>
+</head>
+<body>
+	<form id="form">
+		username<br>
+		<input type="text" name="username" id="username"><span id="uwrong"></span><br><br>
+		password<br>
+		<input type="password" name="password" id="password"><span id="pwrong"></span><br><br>
+		<input type="submit" value="login" id="btn" onclick="login_val()">
+
+	</form>
+	<script>
+		var frm=document.getElementById("form");
+		frm.onsubmit=function collection_val(){
+ 		var user_text=document.getElementById("username").value;
+		var pass_text=document.getElementById("password").value;
+		var u_wrong=document.getElementById("uwrong");
+		var p_wrong=document.getElementById("pwrong");
+		login_val(user_text,pass_text,u_wrong,p_wrong);
+		return false;
+ 		}
+
+ 	
+
+ 		function login_val(user_text,pass_text,u_wrong,p_wrong){
+ 			if(user_text=="" && pass_text=="") {
+ 				u_wrong.innerHTML="empty field";
+ 				p_wrong.innerHTML="empty field";
+ 			}
+ 		    if(user_text=="") {
+ 				u_wrong.innerHTML="empty field";
+ 			}
+ 			if(pass_text==""){
+ 				p_wrong.innerHTML="empty field";
+ 			}
+ 			if (user_text=="Kaleem" && pass_text=="12345") {
+ 				window.close();
+ 				window.open("http://www.google.com/","_self");
+
+ 			}
+ 			if (user_text=="Kaleem" && pass_text!="12345") {
+ 				p_wrong.innerHTML="password doesn't exist";
+ 			}
+ 			if (user_text!="Kaleem" && pass_text=="12345") {
+ 				u_wrong.innerHTML="user name doesn't exist";
+ 			}
+ 			
+ 		}
+
+
+	</script>
+</body>
+</html>

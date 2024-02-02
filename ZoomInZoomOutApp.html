@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>js</title>
+</head>
+<body>
+<h1 align="center">ZOOM In and ZOOM Out Application</h1>
+<hr>
+<h2 id="text">Isamia University Bahawalpur</h2>
+<button id="zoom-in">ZOOM IN</button>
+<button id="zoom-out">ZOOM OUT</button>
+<button id="reset">RESET</button>
+<script>
+var zoom_out=document.getElementById("zoom-out");
+var zoom_in=document.getElementById("zoom-in");
+var reset=document.getElementById("reset");
+var result=document.getElementById("text");
+
+zoom_out.onclick=function first()
+{
+result.style.fontSize="40px";
+zoom_out.onclick=function second(){
+result.style.fontSize="45px";
+zoom_out.onclick=function three(){
+result.style.fontSize="50px";
+zoom_out.onclick=function four(){
+result.style.fontSize="55px";
+zoom_out.onclick=function five(){
+result.style.fontSize="60px";
+}
+}
+}
+}
+}
+
+
+zoom_in.onclick=function first()
+{
+result.style.fontSize="60px";
+zoom_in.onclick=function second(){
+result.style.fontSize="55px";
+zoom_in.onclick=function three(){
+result.style.fontSize="50px";
+zoom_in.onclick=function four(){
+result.style.fontSize="45px";
+zoom_in.onclick=function five(){
+result.style.fontSize="40px";
+}
+}
+}
+}
+}
+
+reset.onclick=function first()
+{
+result.style.fontSize="40px";
+}
+
+
+
+
+
+
+</script>
+</body>
+</html>

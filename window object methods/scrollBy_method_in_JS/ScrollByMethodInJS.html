@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>js</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+#container{
+width:450px;
+height:400px;
+border:1px solid red;
+margin:100px auto;
+
+}
+
+#product-viewer{
+padding:0;
+margin:0;
+text-align:center;
+margin-top:20px;
+font-size:40px;
+}
+
+#left,#right{
+float:left;
+}
+
+#left,#right{
+font-size:30px;
+color:red;
+clear:left;
+
+}
+
+#img-container{
+width:300px;
+height:250px;
+border:1px solid red;
+float:left;
+margin-left:70px;
+margin-top:30px;
+overflow:hidden;
+
+}
+
+#img-sub-container{
+width:800px;
+height:250px;
+border:1px solid grey;
+margin:0 auto;
+
+}
+
+#product{
+width:150px;
+height:200px;
+float:left;
+margin-left:33px;
+
+}
+
+button{
+width:70px;
+height:40px
+}
+</style>
+</head>
+<body>
+<div id="container">
+<h1 id="product-viewer">Products Viewer</h1>
+<i class="fa fa-chevron-circle-left" id="left" onclick="move(-200)">
+<div id="img-container">
+
+<div id="img-sub-container">
+
+<div id="product">
+<img src="2.png" width="200" height="200">
+<center><button>Buy Now</buuton><center>
+</div>
+
+<div id="product">
+<img src="2.png" width="200" height="200">
+<center><button>Buy Now</buuton></center>
+</div>
+
+<div id="product">
+<img src="2.png" width="200" height="200">
+<center><button>Buy Now</buuton></center>
+</div>
+
+<div id="product">
+<img src="2.png" width="200" height="200">
+<center><button>Buy Now</buuton></center>
+</div>
+
+
+</div>
+
+</div>
+<i class="fa fa-chevron-circle-right" id="right" onclick="move(200)">
+
+</div>
+
+
+
+<script>
+function move(x){
+document.getElementById("product").scrollBy(x,0);
+}
+</script>
+</body>
+</html>

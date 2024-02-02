@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>js</title>
+<style>
+div{
+width:400px;
+height:300px;
+border:1px solid grey;
+margin-top:10px;
+}
+
+</style>
+<script>
+function update(){
+var x = document.getElementById("user").value;
+var y = document.getElementById("result");
+y.innerHTML=x;
+}
+</script>
+</head>
+<body>
+<input id="user">
+<button onclick="update()">update</button>
+<div><span id="result"></span></div>
+</body>
+</html>

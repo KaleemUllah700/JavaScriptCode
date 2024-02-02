@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Form Validation</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="javascript.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+    <form>
+    <h1 id="sign_form">Sign Up Form</h1>
+        <b id="firstname">Firstname</b><br>
+        <input type="text" name="firstname" id="firstname" onchange="fname_val()" onclick="fname_val_close()"><i class="fa fa-check" style="font-size: 20px;margin-left: 10px; display: none;" id="tick"></i><br>
+        <b id="lastname">Lastname</b><br>
+        <input type="text" name="lastname" id="lastname" onclick="fname_val()"><i class="fa fa-check" style="font-size: 20px;margin-left: 10px; display: none;" id="tick"></i><br>
+        <b id="mobile">Mobile</b><br>
+        <input type="number" name="mobile" id="mobile" onclick="fname_val();lname_val()"><i class="fa fa-check" style="font-size: 20px;margin-left: 10px; display: none;" id="tick"></i><br>
+        <b id="re-mobile">Re-mobile</b><br>
+        <input type="number" name="mobile" id="re-mobile" onclick="fname_val();lname_val()"><i class="fa fa-check" style="font-size: 20px;margin-left: 10px; display: none;" id="tick"></i><br>
+        <b id="email">Email</b><br>
+        <input type="email" name="email" id="email" onclick="fname_val();lname_val()"><i class="fa fa-check" style="font-size: 20px;margin-left: 10px; display: none;" id="tick"></i><div id="hint-email" style="display: none;"><span id="gmail" style="color: red;cursor: pointer;">gmail.com</span><span id="yahoo" style="color: blue;cursor: pointer;">yahoomail.com</span></div><br>
+        <b id="username">Username</b><br>
+        <input type="text" name="username" id="username" onclick="fname_val();lname_val()"><i class="fa fa-check" style="font-size: 20px;margin-left: 10px; display: none;" id="tick"></i><br>
+        <b id="password">Password</b><br>
+        <input type="password" name="password" id="password" onclick="fname_val();lname_val()"><i class="fa fa-check" style="font-size: 20px;margin-left: 10px; display: none;" id="tick"></i><br>
+        <input type="submit" id="sign-up" value="Sign Up!" disabled="disabled">
+    </form>
+
+</body>
+</html>

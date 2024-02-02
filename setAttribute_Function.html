@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>setAttribute function</title>
+</head>
+<body id="bg">
+<h1 align="center">setAttribute in JS</h1>
+<h1 id="result">Kaleem Ullah</h1>
+<button onclick="demo()">click me to position the heading</button>
+<button onclick="demo1()">click me to change the bgcolor of web page</button>
+<script>
+
+function demo()
+{
+ var x=document.getElementById("result");
+ x.setAttribute("align","center");
+}
+
+function demo1(){
+ var x=document.getElementById("bg");
+ x.setAttribute("bgcolor","red");
+}
+</script>
+</body>
+</html>

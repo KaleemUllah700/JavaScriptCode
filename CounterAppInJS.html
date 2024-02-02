@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>js</title>
+</head>
+<body>
+	<h1 align="center">Counter App</h1>
+    <p id="result"></p>
+    <button onclick="demo()">start counter</button>
+    <button onclick="stop()">stop counter</button>
+    <script>
+    	var y;
+    	function demo(){
+    	var result=document.getElementById("result");
+    	var x=1;
+    	function start(){
+    		result.innerHTML=x++;
+
+    	}
+    	y=setInterval(start,100);
+    }
+    	function stop(){
+    		clearInterval(y);
+    	}
+    </script>
+</body>
+</html>

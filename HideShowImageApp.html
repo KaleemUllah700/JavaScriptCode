@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>js</title>
+</head>
+<body>
+<button id="btn" onclick="demo()">Hide</button>
+<img src="thumb3.gif" id="result">
+<script>
+function demo(){
+var x=document.getElementById("btn");
+var result=document.getElementById("result");
+var text=document.getElementById("btn").innerHTML;
+result.style.display="none";
+x.innerHTML="show";
+if(text=="show")
+{
+result.style.display="block";
+x.innerHTML="Hide";
+}
+else{
+result.style.display="black";
+}
+}
+</script>
+</body>
+</html>

@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>js</title>
+</head>
+<body>
+<form>
+<input type="number" id="user1">
+<input type="number" id="user2">
+<button onclick="demo()">calculate</button>
+</form>
+<script>
+function demo(){
+var x=Number(document.getElementById("user1").value);
+var y=Number(document.getElementById("user2").value);
+add(x,y);
+}
+function add(a,b)
+{
+window.alert(a+b);
+}
+</script>
+</body>
+</html>

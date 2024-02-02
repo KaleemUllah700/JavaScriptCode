@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>js</title>
+<style>
+div{
+width:220px;
+height:80px;
+background-color:red;
+position:fixed;
+bottom:0;
+left:40%;
+}
+#range{
+position:fixed;
+margin-top:35px;
+margin-left:30px;
+color:white;
+}
+#show{
+color:white;
+font-size:17px;
+font-weight:bold;
+}
+</style>
+<script>
+function Range(){
+var x=document.getElementById("range").value;
+var y=document.getElementById("result");
+y.style.fontSize=x;
+var z=document.getElementById("show");
+z.innerHTML="your font size is now ="+x+"px";
+}
+</script>
+</head>
+<body>
+<h1 id="result">WAP Institute</h1>
+<div>
+<p id="show"></p>
+<input type="range" id="range" min="0" max="1000" oninput="Range()">
+</div>
+</body>
+</html>

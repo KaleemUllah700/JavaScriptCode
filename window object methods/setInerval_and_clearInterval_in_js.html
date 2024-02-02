@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html oncontextmenu="widow.alert('right click not allowed');return false;">
+<head>
+<title>js</title>
+</head>
+<body>
+<h1 id="result"></h1>
+<button onclick="stop()">click me to stop the time</button>
+<script>
+var stop=setInterval(time,1000);
+function time(){
+var date=new Date();
+var y=date.toLocalTimeString();
+document.getElementById("result").innerHTML=y;
+}
+
+function stop(){
+clearInterval(stop);
+}
+</script>
+</body>
+</html>

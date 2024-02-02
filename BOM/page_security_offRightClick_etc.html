@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html oncontextmenu="window.alert('right click not allowed');return false;">
+<head>
+<title>js</title>
+</head>
+<body>
+<center>
+<a href="js1.html"><h1>my 1st web page</h1></a>
+<button onclick="farward()">go farward</button>
+<script>
+
+history.pushState(null,null,"dsdfsdfsd");
+history.pushState(null,null,Location.href);
+history.onpopstate=function(){
+history.forward();
+}
+</script>
+</body>
+</html>

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>js</title>
+</head>
+<body>
+<h2 id="notice"></h2>
+<div id="webpage">
+<h1>welcome to website</h1>
+</div>
+<script>
+function check(){
+if(navigator.onLine==true){
+document.getElementById("webpage").style.display="block";
+}
+else{
+document.getElementById("webpage").style.display="none";
+document.getElementById("notice").innerHTML="no internet connection please connect your internet";
+}
+}
+
+check();
+</script>
+</body>
+</html>

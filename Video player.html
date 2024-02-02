@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>js</title>
+<style>
+#page{
+width:700px;
+height:550px;
+border:5px solid black;
+margin:0 auto;
+}
+header{
+width:700px;
+height:70px;
+background-color:black;
+float:left;
+box-sizing:border-box;
+}
+section{
+width:700px;
+height:410px;
+background-color:white;
+float:left;
+box-sizing:border-box;
+
+}
+footer{
+width:700px;
+height:70px;
+background-color:black;
+float:left;
+box-sizing:border-box;
+}
+#vplayer{
+color:white;
+padding:0;
+margin:0;
+text-align:center;
+margin-top:13px;
+font-family:sans-serif;
+}
+#btn{
+width:150px;
+height:40px;
+float:left;
+margin:17px;
+margin-left:45px;
+box-sizing:border-box;
+border-radius:20px;
+font-size:16px;
+font-weight:bold;
+
+
+
+
+}
+
+</style>
+<script>
+function playvideo(){
+var x=document.getElementById("video");
+x.play();
+}
+
+function pausevideo(){
+var x=document.getElementById("video");
+x.pause();
+}
+
+function vload(){
+var x=document.getElementById("video").value;
+var y=document.getElementById("video");
+y.src=x;
+}
+</script>
+</head>
+<body>
+
+<div id="page">
+<header><h1 id="vplayer">Video Player<h1></header>
+
+<section><video src="ch-1 css2 intro.wap" id="video"></video></section>
+
+<footer>
+<button id="btn"><input type="file" value="Upload video" onchange="vload()"></button>
+<button id="btn" onclick="playvideo()">Play video</button>
+<button id="btn" onclick="pausevideo()">Pause video</button>
+</footer>
+</div>
+</body>
+</html>

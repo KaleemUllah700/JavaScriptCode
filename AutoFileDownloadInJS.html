@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>js</title>
+</head>
+<body>
+<p>your download will begin in<span id="time">5</span> seconds</p>
+<a href="paper3.pdf" download="research">click here if you download does not begin</a>
+</body>
+<script>
+	window.onload=function(){
+		var count=5;
+		var stop=setInterval(timer,1000);
+		function timer(){
+			var span=document.getElementById("time");
+			span.innerHTML=count--;
+			if(count<0){
+				clearInterval(stop);
+				/*
+				PDF direct open
+				var a=document.createElement("a");
+				a.href="paper3.pdf";
+				a.download="research";
+				a.click();
+				*/
+
+				/*
+				link open
+				location.assign("http://google.com","_self");
+				*/
+
+				/*
+				link open in new tag
+				window.open("http://google.com");
+				*/
+			}
+		}
+	}
+</script>
+</html>

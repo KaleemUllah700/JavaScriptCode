@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>js</title>
+<script>
+function IsEven(){
+var x=document.getElementById("username").value;
+var y=x%2==0?"Number is Even":"Number is Odd";
+window.alert(y);
+}
+</script>
+</head>
+<body>
+<form>
+<h1 align="center">Even Or Odd Finder</h1>
+<hr>
+Enter Your Number!<br>
+<input type="number" id="username"><br><br>
+<input type="submit" value="check Even Or Odd" onclick="IsEven()">
+</form>
+</body>
+</html>

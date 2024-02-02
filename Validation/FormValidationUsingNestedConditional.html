@@ -1,0 +1,38 @@
+<html>
+<head>
+	<title>js</title>
+</head>
+<body>
+	<h1 align="center">Form Validation Using Nested Conditon</h1>
+	<form id="form">
+	username<br>
+	<input type="text" name="username" id="username" placeholder="username"><br><br>
+	password<br>
+	<input type="password" name="password" id="password" placeholder="password"><br><br>
+	<input type="submit" value="login">
+</form>
+	<script>
+		
+		var frm=document.getElementById("form");
+		frm.onsubmit=function(){
+			var user=document.getElementById("username").value;
+			var pass=document.getElementById("password").value;
+			if (user=="Kaleem") {
+				if (pass=="12345") {
+					window.alert("login success");
+				}
+				else{
+					window.alert("password wrong");
+				}
+			}
+			else{
+				window.alert("user not found");
+			}
+
+				
+			}
+		
+
+	</script>
+</body>
+</html>
